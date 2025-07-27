@@ -22,13 +22,15 @@ public class LocationController {
 	
 	@PostMapping("/update")
     public ResponseEntity<?> updateLocation() {
-        double latitude = -90 + new Random().nextDouble() * 180;
-        double longitude = -180 + new Random().nextDouble() * 360;
-
-        String location = latitude + "," + longitude;
-        kafkaService.updateLocation(location);
-
-        return ResponseEntity.ok(Map.of("message","Location sent: " + location));
+		for (int i = 0;i<1000000;i++) {
+			double latitude = -90 + new Random().nextDouble() * 180;
+		    double longitude = -180 + new Random().nextDouble() * 360;
+		
+		    String location = latitude + "," + longitude;
+		    kafkaService.updateLocation(location);
+		}
+       
+        return ResponseEntity.ok(Map.of("message","Location sent"));
     }
 	
 }
