@@ -5,9 +5,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.TopicBuilder;
 
+import com.abhinav3254.delivery_boy.constants.AppConstants;
+
 @Configuration
 public class KafkaConfig {
-	
 	
 	/**
 	 * Creating a new topic 
@@ -17,7 +18,7 @@ public class KafkaConfig {
 	@Bean
 	public NewTopic topic() {
 		return TopicBuilder
-				.name("location-update-topic")
+				.name(AppConstants.LOCATION_TOPIC)
 //				.partitions(0)
 //				.replicas(0)
 				.build();
