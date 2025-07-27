@@ -17,3 +17,9 @@ abhinavkumar@Abhinavs-MacBook-Air kafka_2.13-3.5.1 % bin/kafka-server-start.sh c
 
 this below command is to start zookeepar
 abhinavkumar@Abhinavs-MacBook-Air kafka_2.13-3.5.1 % bin/zookeeper-server-start.sh config/zookeeper.properties
+
+
+
+Why they removed zookeeper from Kafka 4.x
+
+best documentation - https://codefarm0.medium.com/kafka-4-0-the-future-of-event-streaming-without-zookeeper-58b9ab26f5c0
